@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AeroBMSCE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="animated-gradient-nav">
+            <div class="logo-container">
+                <img src="/images/logo.jpeg" alt="AeroBMSCE Logo" class="logo-img">
+                <span class="logo-text">AeroBMSCE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#teams">Teams</a>
+                <a href="#projects">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Fullscreen Video Background -->
+    <video autoplay muted loop class="video-bg">
+        <source src="/images/bg1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-content">
+        <h1 class="hero-typing"><span id="typed-text"></span></h1>
+        <p class="slide-in">Explore Aeromodelling, Drones & RC Planes</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h1 class="section-title">About <span>AeroBMSCE</span></h1>
+            <div class="mission-vision">
+                <div class="card mission-card">
+                    <h2>Our Mission</h2>
+                    <p>
+                        To foster innovation and excellence in the fields of aeromodelling, drone technology, and RC
+                        aviation.
+                        We aim to provide students a platform to design, build, and fly real-world aerial systems while
+                        developing
+                        their technical and creative skills through collaborative teamwork and competition.
+                    </p>
+                </div>
+                <div class="card vision-card">
+                    <h2>Our Vision</h2>
+                    <p>
+                        To be a leading aeromodelling community that inspires future engineers to revolutionize the
+                        skies through sustainable,
+                        efficient, and creative aerial technologies. We envision creating a culture of hands-on
+                        learning, exploration,
+                        and interdisciplinary innovation at BMSCE and beyond.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teams" class="teams-section">
+        <h1 class="section-title">Meet Our Teams</h1>
+
+        <div class="team-card-wrapper">
+
+            <!-- Team Vortex -->
+            <div class="team-card-container">
+                <div class="team-summary-card" onclick="toggleTeamDetails('vortex')">
+                    <img src="/images/drone.jpg" alt="Team Vortex">
+                    <h2>Team Vortex</h2>
+                    <p>Experts in drone aerodynamics and real-time flight systems.</p>
+                </div>
+            </div>
+
+            <!-- Team Blue Impulse -->
+            <div class="team-card-container">
+                <div class="team-summary-card" onclick="toggleTeamDetails('blue')">
+                    <img src="/images/blue impulse.jpg" alt="Team Blue Impulse">
+                    <h2>Team Blue Impulse</h2>
+                    <p>Focusing on automation and backend engineering for UAVs.</p>
+                </div>
+            </div>
+
+            <!-- Team Sky Runners -->
+            <div class="team-card-container">
+                <div class="team-summary-card" onclick="toggleTeamDetails('sky')">
+                    <img src="/images/rc planes.jpg" alt="Team Sky Runners">
+                    <h2>Team Snitch Squad</h2>
+                    <p>Flight dynamics experts leading fast and stable aerial systems.</p>
+                </div>
+            </div>
+
+            <!-- Team AeroMatrix -->
+            <div class="team-card-container">
+                <div class="team-summary-card" onclick="toggleTeamDetails('aero')">
+                    <img src="/images/propulsion.jpg" alt="Team AeroMatrix">
+                    <h2>Team Yaksha</h2>
+                    <p>Leaders in propulsion systems and structural integration.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function toggleTeamDetails(id) {
+            const card = document.getElementById(id);
+            card.style.display = card.style.display === "none" ? "block" : "none";
+        }
+    </script>
+
+    <section id="projects" class="timeline-carousel">
+  <h2 class="timeline-title">Our Projects and Achievements</h2>
+
+  <div class="carousel__viewport">
+    <button class="btn btn--prev" aria-label="Previous">‹</button>
+
+    <div class="carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/1.png" alt="2018 project image" />
+        <div class="project-info">
+          <h3>2018</h3>
+          <p>Team Blue Impulse from AeroBMSCE participated in SAE India Aero Design Challenge, Southern Section, in College of Engineering, Guindy, Chennai. They bagged the 2nd prize in the design report, and 3rd prize overall, out of the 47 teams which participated in the micro class.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/2.png" alt="2019 project image" />
+        <div class="project-info">
+          <h3>2019</h3>
+          <p>Technoxian 2k19 quadcopter championship team THE SNITCH SQUAD..</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/3.png" alt="2020 project image" />
+        <div class="project-info">
+          <h3>2020</h3>
+          <p>Congratulations to Team Blue Impulse, AeroBMSCE for winning the 1st place overall in SAEINDIA SOUTHERN SECTION AERO DESIGN CHALLENGE 2020.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/6.png" alt="Workshop project image" />
+        <div class="project-info">
+          <h3>Workshop 2022</h3>
+          <p>Glider Workshop</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/7.png" alt="2022 project image" />
+        <div class="project-info">
+          <h3>2022</h3>
+          <p>Won 2nd place in the South India Project Exhibition-2022 held at KIT, Tiptur.</p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/8.png" alt="AeroThon 2022 project image" />
+        <div class="project-info">
+          <h3>AeroThon 2022</h3>
+          <p>AeroThon 2022 – After completing the manual operation successfully</p>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/9.png" alt="SAE DDC project image" />
+        <div class="project-info">
+          <h3>SAE DDC 2024</h3>
+          <p>Presenting the team that participated in SAE DDC at Chennai and secured 9th position in the competition.✨️</p>
+        </div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/10.png" alt="NITK Surathkal project image" />
+        <div class="project-info">
+          <h3>NITK Surathkal 2024</h3>
+          <p>Proud to share that a team of fresh recruits from AeroBMSCE have clinched 2nd place in the drone racing competition at NITK Surathkal!🏆👏</p>
+        </div>
+      </div>
+
+      <!-- Slide 9 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/11.png" alt="Drone Workshop project image" />
+        <div class="project-info">
+          <h3>Drone Workshop 2024</h3>
+          <p>Highlights from the exciting drone workshop at PhaseShift 2024, brought to you by SpaceGeeks Mumbai! 🚀✨️ Participants got hands-on with our incredible DIY drone kits, assembling and flying their creations.</p>
+        </div>
+      </div>
+
+      <!-- Slide 10 -->
+      <div class="carousel__slide project-slide">
+        <img src="images/12.png" alt="ADC 2025 project image" />
+        <div class="project-info">
+          <h3>ADC 2025</h3>
+          <p>AeroBMSCE Team Blue Impulse secured the award for Best Technical Presentation under Micro Class category (Aircraft Development Challenge) 2025..</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn--next" aria-label="Next">›</button>
+  </div>
+</section>
+
+
+    <script src="carousel.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            new Carousel(".carousel__viewport", { speed: 400 });
+        });
+    </script>
+
+    <script>
+        const target = document.getElementById("typed-text");
+        const text = "Welcome to ";
+        const aeroText = "<span style='color:#ffee00;'>AeroBMSCE</span>";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                target.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 120); // adjust speed here
+            } else {
+                // Append AeroBMSCE instantly in yellow
+                target.innerHTML += aeroText;
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+
+    <footer>
+        &copy; 2025 AeroBMSCE. All rights reserved.
+        <p>Designed by Akshay S</p>
+    </footer>
+
+</body>
+
+</html>

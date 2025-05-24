@@ -1,0 +1,721 @@
+/* Import fonts at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Playfair+Display:ital@1&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-padding-top: 100px; /* adjust to your navbar height */
+  scroll-behavior: smooth; /* for smooth scrolling */
+}
+
+body {
+  font-family: 'Zefani', sans-serif;
+  background: #f4f7fa;
+  color: #fff;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Background Video */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(100%);
+}
+
+.video-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar */
+.animated-gradient-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 15px 30px;
+  color: white;
+  z-index: 1000;
+  background: linear-gradient(120deg, #6f42c1, #0f67ff, #00ffe7);
+  background-size: 300% 300%;
+  animation: animateGradient 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  padding: 2rem;
+  margin-top: 250px;
+}
+
+.hero-content h1 {
+  font-size: 100px;
+  font-weight: bold;
+}
+.hero-content h1 span {
+  color: #ffee00;
+  font-size: 120px;
+}
+.hero-content p {
+  font-size: 40px;
+  margin-bottom: 300px;
+}
+
+/* Animations */
+.hero-typing {
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -100px; /* vertically centered */
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+.slide-in {
+  animation: slideIn 1.8s ease-out;
+}
+
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 70px;
+  color: #00aeff;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  animation: slideIn 3s ease-out;
+}
+.section-title span {
+  color: #ffee00;
+}
+
+/* About Section */
+.video-section .container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Zefani', sans-serif;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(135deg, #004e92, #000428);
+  padding: 25px 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 150, 255, 0.3);
+  flex: 0 1 calc(50% - 30px);
+  min-width: 320px;
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease-out;
+  margin-bottom: 200px;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 190, 255, 0.6);
+}
+.card h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  color: #00c3ff;
+  border-bottom: 2px solid #00aeff;
+  padding-bottom: 6px;
+}
+.card p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #d0e8ff;
+}
+
+/* Projects Page */
+.timeline-carousel {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  padding: 50px 0;
+}
+
+.timeline-title {
+  font-size: 50px;
+  color: #00aeff;
+  margin-top: 30px;
+  z-index: 10;
+  position: relative;
+  font-weight: bold;
+}
+
+/* Carousel Container */
+.carousel__viewport {
+  width: 100%;
+  max-width: 1100px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Buttons */
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.btn--prev {
+  left: 30px;
+}
+.btn--next {
+  right: 30px;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slide */
+.carousel__slide {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.92);
+  opacity: 0.7;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.carousel__slide:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 174, 255, 0.4);
+}
+
+/* Image inside slide */
+.carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover info overlay */
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 25, 47, 0.85);
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.carousel__slide:hover .project-info {
+  transform: translateY(0%);
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
+  color: #00aeff;
+  margin-bottom: 0.5rem;
+}
+.project-info p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/*teams page */
+.teams-section {
+  padding: 3rem 2rem;
+
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #00cfff;
+  margin-bottom: 3rem;
+  margin-top: 50px;
+}
+
+.team-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-card-container {
+  width: 300px;
+}
+
+.team-summary-card {
+  background: linear-gradient(145deg, #0a0f1b, #10182f);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  margin-bottom: 200px;
+}
+.team-summary-card:hover {
+  transform: perspective(800px) rotateY(10deg) scale(1.05);
+  box-shadow: 0 0 30px #00cfff;
+}
+
+.team-summary-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.team-summary-card h2 {
+  color: #facc15;
+  margin: 0.5rem 0;
+}
+
+.team-summary-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.team-details-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.member-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #00cfff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.member-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 2px solid #00cfff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .team-card-container {
+    width: 90%;
+  }
+}
+
+/* contact page*/
+    .contact-body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #0f0f2b, #1e1e40);
+      color: white;
+    }
+
+    .contact-section {
+      padding: 65px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 2.8rem;
+      color: #ffee00;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #262640;
+      color: white;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #00ffe7;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #ffee00;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #fff800;
+      transform: scale(1.05);
+    }
+
+    .social-links {
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      color: #ffee00;
+      margin: 0 15px;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #00ffe7;
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: -10px 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /*Responsiveness*/
+    /* ========== RESPONSIVE STYLES ========== */
+
+@media (max-width: 1200px) {
+  /* Slightly smaller hero fonts */
+  .hero-content h1 {
+    font-size: 70px;
+  }
+  .hero-content h1 span {
+    font-size: 85px;
+  }
+  .hero-content p {
+    font-size: 28px;
+    margin-bottom: 150px;
+  }
+  
+  /* Cards max width shrink */
+  .card {
+    flex: 0 1 calc(70% - 30px);
+    max-width: 400px;
+    margin-bottom: 150px;
+  }
+
+  /* Timeline carousel height and slide flex shrink */
+  .carousel__viewport {
+    height: 400px;
+  }
+  .carousel__slide {
+    flex: 0 0 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Navbar links stack and gap reduce */
+  .nav-links {
+    gap: 30px;
+  }
+
+  /* Cards stack vertically and full width */
+  .mission-vision {
+    flex-direction: column;
+  }
+  .card {
+    flex: 0 1 100%;
+    max-width: 100%;
+    margin-bottom: 100px;
+  }
+
+  /* Timeline title smaller */
+  .timeline-title {
+    font-size: 40px;
+  }
+
+  /* Reduce carousel height and buttons size */
+  .carousel__viewport {
+    height: 350px;
+  }
+  .btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+
+  /* Team section cards */
+  .team-card-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hero content fonts smaller and margin reduce */
+  .hero-content h1 {
+    font-size: 45px;
+  }
+  .hero-content h1 span {
+    font-size: 55px;
+  }
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 80px;
+  }
+  
+  .hero-typing {
+    font-size: 45px;
+    margin-top: -60px;
+  }
+
+  /* Navbar stack */
+  .animated-gradient-nav {
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Cards full width */
+  .card {
+    max-width: 100%;
+    padding: 20px 30px;
+  }
+
+  /* Timeline carousel height smaller, slide flex full */
+  .carousel__viewport {
+    height: 300px;
+  }
+  .carousel__slide {
+    flex: 0 0 100%;
+  }
+
+  /* Buttons smaller and closer */
+  .btn--prev {
+    left: 10px;
+  }
+  .btn--next {
+    right: 10px;
+  }
+  .btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.8rem;
+  }
+
+  /* Team cards single column */
+  .team-card-container {
+    width: 90%;
+  }
+
+  /* Reduce padding in container inside video-section */
+  .video-section .container {
+    padding: 20px 25px;
+  }
+
+  /* Section titles smaller */
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  /* Contact form inputs font size smaller */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Hero content minimal */
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .hero-content h1 span {
+    font-size: 35px;
+  }
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  /* Navbar font size smaller */
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* Team card container smaller */
+  .team-card-container {
+    width: 100%;
+  }
+}
